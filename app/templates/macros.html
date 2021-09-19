@@ -1,0 +1,9 @@
+{%macro displaySourceList(source_list)%} {%for source in source_list%}
+<div class="col-sm-4 source-card" id="shadow">
+    <h3>{{source.name}}</h3>
+    <p>{{source.description}}</p>
+    <a href="/article/{{source.id}}" class="btn btn-success btn-sm" style="background-color: yellow">
+    Viewing news sources from {{source.id}}</a
+  >
+</div>
+{% endfor %} {% endmacro %}

@@ -1,0 +1,74 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%}
+
+<!-- Styles block -->
+
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='CSS/style.css')}}"> {% endblock %}
+<!-- Content block -->
+
+<!-- {% include 'navbar.html' %} -->
+{% block content%}
+<div class="container" id="Nav">
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;" id="now">
+        <!-- General News -->
+        <h3 style="background-image: url(..app/static/images/background.jpg); color:white;" id="try">General News </h3>
+
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(general)}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:#f2f39f; padding-bottom: 50px;">
+        <!-- Business News -->
+        <h3 style="background-image: url(..app/static/images/businessNews.jpg); color: #fff">Business News </h3>
+
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(business)}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;">
+        <!-- Technology News -->
+        <h3 style="background-color:goldenrod; color:white">Technology News </h3>
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(technology)}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:#f2f39f; padding-bottom: 50px;">
+        <!-- Sports News -->
+        <h3 style="background-color:greenyellow; color:white;">Sports News </h3>
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(sports)}}
+        </div>
+
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;">
+        <!-- Entertainment News -->
+        <h3 style="background-color:goldenrod; color:white">Entertainment News </h3>
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(entertainment)}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:#f2f39f; padding-bottom: 50px;">
+        <!-- Health News -->
+        <h3 style="background-color:greenyellow; color:white">Health News </h3>
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(health)}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;">
+        <!-- Science News -->
+        <h3 style="background-color:goldenrod; color:white">Science News </h3>
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(science)}}
+        </div>
+    </div>
+</div>
+
+{% endblock%}
