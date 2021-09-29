@@ -16,10 +16,12 @@ The home page has  different categories of news from different sites.
 
   If you want to use the program clone the repository and run the following command in terminal:
 $ source virtual/bin/activate
-  (virtual)$ export FLASK_APP=run.py
+  (virtual)$ export FLASK_APP=manage.py
   (virtual)$ export FLASK_ENV=development
-  (virtual)$ flask run
-  
+  (virtual)$ chmod a+x start.sh
+  (virtual)$ ./start.sh
+  open the live link
+
 #### Known bugs
 
 The site is unable to load return 404
